@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Normal function with function keyword
+      function fun(name) {
+        return `Mr. ${name}`;
+      }
+
+      // //Anonymous function
+
+      // function(fname)
+      // {
+      //     return `Mr. ${fname}`;
+      // }
+
+      //function expression
+      const person = function(fname) {
+        return `Mr. ${fname}`;
+      };
+
+      //Arrow function
+      const a = b => {
+        return b * 5;
+      };
+      //or
+      const c = d => d + 09;
+
+      //returning an object
+
+      function daughter(first, last) {
+        const aa = {
+          name: `${first} ${last}`,
+          age: 2
+        };
+        return aa;
+      }
+      console.log("aa");
+      //or convert into arrow function
+      const daughter2 = (first, last) => ({ name: `${first} ${last}`, age: 2 });
+
+      //Immidiately Invoke Function Expression
+      (function(age) {
+        console.log("Running");
+        return "Hi How Are You";
+      })(10);
+    </script>
+  </body>
+</html>
