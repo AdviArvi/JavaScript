@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function outer() {
+        const outerVar = "I am outer function";
+        function inner() {
+          const innerVar = "I am inner function";
+          console.log(innerVar);
+          console.log(outerVar);
+        }
+        return inner;
+      }
+      const innerFn = outer();
+      innerFn();
+
+      //private variable
+      function createGame(gname) {
+        let score = 0;
+        return function win() {
+          score++;
+          return `Your name ${gname} score is ${score}`;
+        };
+      }
+      const hokeyGame = createGame("hokey");
+    </script>
+  </body>
+</html>
