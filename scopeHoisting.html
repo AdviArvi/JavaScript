@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const name = "shital";
+      //   let lname = "thorat";
+      //   var age = 30;
+
+      //   //   //function scope
+      //   //   const age2 = 100;
+      //   //   function go() {
+      //   //     const a = "kiran";
+      //   //   }
+      //   //   go();
+      //   //   console.log(a); //we get the error as we cannot redeclare const.
+
+      //   //upper scope
+
+      //   const b = 20;
+      //   function come() {
+      //     const b = 30;
+      //     const c = "hi";
+      //     console.log(b);
+      //     console.log(c); //output will be 30 and hi
+      //   }
+      //   come();
+      //   console.log(b); //output will be 20;
+
+      //Blocked scope
+
+      //   if (1 === 1) {
+      //     const co = true;
+      //   }
+      //   console.log(co); //we cannot access const co outside as blocked scope
+
+      //   let cool;
+      //   if (1 === 1) {
+      //     cool = true;
+      //   }
+      //   console.log(cool);//output will be true.
+
+      //   function isCool(name) {
+      //     let cool;
+      //     if (name === "kiran") {
+      //       cool = true;
+      //     }
+      //     console.log(cool);
+      //     return cool;
+      //   }
+
+      //   for (let i = 0; i < 10; i++) {
+      //     console.log(i);
+      //   }
+      //   console.log(i);
+
+      //Lexical scoping and static scoping
+
+      //   const color = "Orange";
+
+      //   function dressColor() {
+      //     console.log(color);
+      //   }
+
+      //   function topColor() {
+      //     const color = "White";
+      //     dressColor();
+      //   }
+
+      //   //Hoisting-function declarations
+      //   nice();
+      //   function nice() {
+      //     console.log("Hey");
+      //     console.log(add(10, 51));
+      //   }
+
+      //   function add(a, b) {
+      //     return a + b;
+      //   }
+
+      //   //Hoisting-variables
+      //   var cake;
+      //   console.log(cake);
+      //   cake = 20;//declare the variable first ,use that variable and the declare
+
+      //   const cake2;
+      //   console.log(cake2);
+      //   cake = 40;//Error because we need the initialize const variable at the time of declaration
+
+      let cake3;
+      console.log(cake3);
+      cake3 = 30;
+    </script>
+  </body>
+</html>

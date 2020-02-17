@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const kiran = {
+        name: "shital thorat",
+        sayHi: function() {
+          console.log("Hey shital");
+          return "Hey shital";
+        },
+
+        // short hand method
+        shitalHi() {
+          console.log("Hey Shital");
+        },
+
+        //Arrow function
+
+        adviHi: () => {
+          console.log("Hey Advi");
+        }
+      };
+
+      //Using this keyword
+      const arvika = {
+        name: "Arvika Thorat",
+        sayHi: function() {
+          console.log(`Hey ${this.name}`);
+          return "Hey Shital";
+        }
+      };
+    </script>
+  </body>
+</html>
