@@ -1,17 +1,31 @@
-const shital={
-    name: "shital thorat",
-    sayHi: function() {
-      console.log("Hey shital");
-      return "Hey shital";
-    }}
+// const shital={
+//     name: "shital thorat",
+//     sayHi: function() {
+//       console.log("Hey shital");
+//       return "Hey shital";
+//     }}
 
-const button=document.querySelector('.clickMe');
-function handel()
+// const button=document.querySelector('.clickMe');
+// function handel()
+// {
+//     console.log("Great Working")
+// }
+// button.addEventListener('click',handel);
+
+// // Timer Function
+
+// setTimeout(function(){console.log("Done")},1000);
+
+// function callback
+
+function happy(name)
 {
-    console.log("Great Working")
+  return `I am ${name}`;
 }
-button.addEventListener('click',handel);
 
-//Timer Function
-
-setTimeout(function(){console.log("Done");},1000);
+function sad(name)
+{
+  return `Hi ${name}`;
+}
+const sayHappy=sad(happy('shital'));
+console.log(sayHappy);
