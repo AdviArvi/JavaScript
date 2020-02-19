@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title> -->
+  </head>
+  <body>
+    <div id="sk">
+      <h1>Calculator</h1>
+      <form>
+        Number1:
+        <input type="number" id="num1" name="num1" />
+        <br />
+        <br />
+        Number2:
+        <input type="number" id="num2" name="num2" />
+        <br />
+        <br />
+        <select id="operator">
+          <option value="+">Add</option>
+          <option value="-">Substract</option>
+          <option value="/">Divide</option>
+          <option value="*">Muliply</option>
+        </select>
+        <button type="submit" onclick="sub()">Submit</button>
+        <button type="reset">Reset</button>
+        <br />
+        <br />
+        <label for="result">Result</label>
+        <input type="text" id="result" />
+      </form>
+    </div>
+    <!-- <script src="./task1.js"></script> -->
+    <script>
+      function sub() {
+        var n1 = document.getElementById("num1").value;
+        var n2 = document.getElementById("num2").value;
+        var oper = document.getElementById("operator").value;
+
+        if (oper === "+") {
+          document.getElementById("result").value = n1 + n2;
+        } else if (oper === "-") {
+          document.getElementById("result").value = n1 - n2;
+        } else if (oper === "/") {
+          document.getElementById("result").value = n1 / n2;
+        } else if (oper === "*") {
+          document.getElementById("result").value = n1 * n2;
+        }
+      }
+    </script>
+  </body>
+</html>
