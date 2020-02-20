@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title> -->
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+#cc{ 
+        height:300px;
+        width:450px;
+        border:black grove 2px;
+        border-radius:10px;
+        border-color:black;
+      }
+      </style>
   </head>
   <body>
-    <div id="sk">
-      <h1>Calculator</h1>
-      <form>
+    <center>
+    <div class="cc">
+      <h1><center>Calculator</center></h1>
+      <form name='myForm'>
         Number1:
         <input type="number" id="num1" name="num1" />
         <br />
@@ -22,32 +30,22 @@
           <option value="-">Substract</option>
           <option value="/">Divide</option>
           <option value="*">Muliply</option>
+          <option value="%">Modulus</option>
         </select>
-        <button type="submit" onclick="sub()">Submit</button>
-        <button type="reset">Reset</button>
+        <input type='button' onclick="sub()" value='Submit'/>
+        <input type="reset"/>
         <br />
         <br />
-        <label for="result">Result</label>
+        Result:        
         <input type="text" id="result" />
+        
+                  
+          
       </form>
     </div>
-    <!-- <script src="./task1.js"></script> -->
-    <script>
-      function sub() {
-        var n1 = document.getElementById("num1").value;
-        var n2 = document.getElementById("num2").value;
-        var oper = document.getElementById("operator").value;
-
-        if (oper === "+") {
-          document.getElementById("result").value = n1 + n2;
-        } else if (oper === "-") {
-          document.getElementById("result").value = n1 - n2;
-        } else if (oper === "/") {
-          document.getElementById("result").value = n1 / n2;
-        } else if (oper === "*") {
-          document.getElementById("result").value = n1 * n2;
-        }
-      }
-    </script>
+    <script src="./task1.js"></script>
+    
+      
+    
   </body>
 </html>

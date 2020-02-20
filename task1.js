@@ -1,18 +1,42 @@
 
 
-const butts=document.querySelector('.b');
-
-    function sub()
-    {
-        var num1=document.querySelector('#num1').value;
-        var num2=document.querySelector('#num2').value;
-        var oper=document.querySelector('#operators').value;
-
-        if(oper==="Add")
+function sub() {
+        const n1 = parseInt(document.getElementById("num1").value);
+        console.log(n1);
+        const n2 = parseInt(document.getElementById("num2").value);
+        console.log(n2);
+        const oper = document.getElementById("operator").value;
+        if(isNaN(n1)||isNaN(n2))
         {
-            document.querySelector('#res').value=num1+num2;
+          alert("Enter valid number")
         }
-    }
-    // butts.addEventListener('click',sub);
 
+        else if (oper === "+") {
+          document.getElementById("result").value = n1 + n2;
+          console.log(n1+n2);
+        } else if (oper === "-") {
+          document.getElementById("result").value = n1 - n2;
+          console.log(n1-n2);
+        } else if (oper === "/") {
 
+          if(n2=='0'&& n1=='0'||n2=='0')
+          {
+            alert("Unable to divide");
+          }
+          else
+          {
+          document.getElementById("result").value = n1 / n2;
+          console.log(n1/n2);
+          }
+        } 
+        else if (oper === "*") {
+          document.getElementById("result").value = n1 * n2;
+          console.log(n1*n2);
+        }
+        else if(oper==='%'){
+            document.getElementById("result").value = n1 % n2;
+            document.write("The modulus of " +n1+ " and " +n2+ " is " +n1%n2);
+            
+        }
+      }
+    
