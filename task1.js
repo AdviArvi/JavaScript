@@ -44,8 +44,10 @@ function sub() {
       
         function modulus(n1,n2)
         {            
-                document.getElementById("result").innerHTML= n1 % n2;
-                document.write("The modulus of " +n1+ " and " +n2+ " is " +n1%n2);
-        }
+
+            
+                document.getElementById("result").innerHTML= n1%n2;
+                    document.write("The modulus of " +n1+ " and " +n2+ " is " +result);
+                        }
 
         
