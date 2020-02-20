@@ -1,6 +1,6 @@
 
 
-
+const butts=document.querySelector(".button");
 function sub() {
     var n1 = parseInt(document.getElementById("num1").value);
     console.log(n1);
@@ -31,6 +31,7 @@ function sub() {
           console.log(n1/n2);
           }
         } 
+    
         else if (oper === "*") {
           document.getElementById("result").value = n1 * n2;
           console.log(n1*n2);
@@ -44,10 +45,12 @@ function sub() {
       
         function modulus(n1,n2)
         {            
-
-            
-                document.getElementById("result").innerHTML= n1%n2;
-                    document.write("The modulus of " +n1+ " and " +n2+ " is " +result);
-                        }
-
+            var aa=n1%n2;
+            document.getElementById("ans").innerHTML= `The modulus of ${n1} and ${n2} is ${aa}`;
+            console.log("This is modulus");
+        }
+    
         
+        butts.addEventListener('click',sub);
+
+    
