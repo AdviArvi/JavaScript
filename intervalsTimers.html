@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function buzzer() {
+        console.log("buzzer");
+      }
+      //   setTimeout(buzzer, 500);
+
+      //   setInterval(buzzer, 2000);
+
+      function setImmediateInterval(funcToRun, ms) {
+        funcToRun();
+        return setInterval(funcToRun, ms);
+      }
+      setImmediateInterval(buzzer, 2000);
+      function sayHi() {
+        console.log("Hey");
+      }
+      //   setImmediateInterval(sayHi, 200);
+
+      function distroy() {
+        document.body.innerHTML = `<p>DESTROYED</p>`;
+      }
+
+      const bombTimer = setTimeout(distroy, 5000);
+
+      window.addEventListener("click", function() {
+        console.log("You clicked");
+
+        clearTimeout(bombTimer);
+      });
+    </script>
+  </body>
+</html>

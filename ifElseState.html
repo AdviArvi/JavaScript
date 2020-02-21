@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //if else
+
+      const marks = 58;
+
+      if (marks > 70) {
+        console.log("Distinction");
+      } else if (marks > 60) {
+        console.log("First class");
+      } else if (marks > 50) {
+        console.log("Second class");
+      } else {
+        console.log("Fail");
+      }
+
+      //function with if else
+      function senToLower(sentence, lowercase) {
+        if (lowercase) {
+          return sentence.replace(/\s/g, "-").toLowerCase();
+        }
+        return sentence.replace(/\s/g, "-");
+      }
+
+      //operators
+      const fname = "Shital";
+      const lname = "Thorat";
+
+      if (fname === "kiran" || (fname === "Shital" && lname === "Thorat")) {
+        console.log("You are write");
+      }
+      //boolean values
+      const firstname = "kiran";
+      const isAwesomeName = "shitalkiran".includes(firstname);
+      if (isAwesomeName) {
+        console.log("SUPER COOL");
+      }
+
+      function nameIsAwesome(firstname1) {
+        return "shitalkiran".includes(firstname1);
+      }
+
+      if (nameIsAwesome("kiran")) {
+        console.log("coool");
+      }
+
+      //value of true and false
+
+      //   const score = 0;
+      //   //false
+      // const score = -20;
+      //   //true
+      //   let score;
+      //false
+      //   let score = null;
+      //   //false
+      //   let score = "sh" * 100;
+      //   //false
+      //   let score = "0";
+      //   //true
+      //   let score = [];
+      //   //true
+      let score = {};
+      //   //true
+
+      if (score) {
+        console.log("There is score already");
+      } else {
+        console.log("No score");
+      }
+
+      const values = [
+        [],
+        {},
+        -10,
+        1,
+        0,
+        "",
+        "full string",
+        " ",
+        undefined,
+        NaN,
+        null
+      ];
+      console.group("Truthy or falsy values");
+      values.forEach(value => {
+        if (value) {
+          console.log(value, "is truthy");
+        } else {
+          console.log(value, "is falsy");
+        }
+      });
+      console.groupEnd();
+
+      //coercion
+      const isCool = true;
+
+      if (!isCool) {
+        console.log("You are not cool");
+      }
+    </script>
+  </body>
+</html>

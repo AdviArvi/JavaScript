@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <input typr="text" name="first" value="shital" /> -->
+    <script>
+      //   const person = {
+      //     name: "shital",
+      //     age: 30,
+      //     propertyCheck: "NEVER",
+      //     "cool-dude": true,
+      //     "542": true,
+      //     marks: {
+      //       maths: 98,
+      //       phys: 90
+      //     },
+      //     sayHi: function(greeting = "Hey") {
+      //       return `${greeting} ${this.name}`;
+      //     }
+      //   };
+      //   person.job = "full stack developer";
+      //   person.age = 28;
+      //   console.log(person);
+
+      //   console.log(person.age);
+      //   const propertyCheck = prompt("what do you want to check");
+      //   console.log(propertyCheck);
+      //   console.log(person["propertyCheck"]);
+
+      //   const nameInput = document.querySelector('[name="first"]');
+      //   const name = nameInput.value;
+      //   console.log(name);
+
+      let name1 = "shital";
+      let name2 = "shital";
+
+      console.log(name1 === name2);
+      name1 = "kiran";
+      console.log(name1 === name2);
+
+      name1 = name2;
+      console.log(name1 === name2);
+      name2 = name1;
+      name2 = "AdviArvi";
+
+      const person1 = {
+        first: "shital",
+        last: "thorat",
+        marks: {
+          eng: 90,
+          math: 96
+        }
+      };
+      const person2 = {
+        first: "shital",
+        last: "thorat"
+      };
+
+      //   const person3 = person1;
+      //   person3.first = "Advika";
+      //   console.log(person3.first);
+      //   console.log(person1.first);
+
+      //Spread operator
+      const person3 = { ...person1 };
+      person3.first = "kiran";
+
+      person3.marks.math = 92;
+
+      //Functions
+
+      function doStuff(data) {
+        data = "something else";
+        console.log(data);
+      }
+      doStuff(name1);
+    </script>
+  </body>
+</html>

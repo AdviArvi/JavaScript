@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <img
+    src="./turtle_PNG64.png"
+    alt="Turt"
+    class="turt"
+    width="200px"
+    height="200px"
+  />
+  <body>
+    <style>
+      .turt {
+        position: relative;
+        transform: translateX(10px) translateY(10px);
+      }
+    </style>
+    <script>
+      const turtle = document.querySelector(".turt");
+      let x = 0;
+      let y = 0;
+      function handelKeyDown(event) {
+        if (!event.key.includes("Arrow")) {
+          return;
+        }
+        switch (event.key) {
+          case "ArrowUp":
+            y = y - 1;
+            break;
+          case "ArrowDown":
+            y = y + 1;
+            break;
+          case "ArrowLeft":
+            x = x - 1;
+            break;
+          case "ArrowRight":
+            x = x + 1;
+            break;
+          default:
+            console.log("Default case");
+            break;
+        }
+        turtle.style.background = "green";
+      }
+      window.addEventListener("keydown", handelKeyDown);
+    </script>
+  </body>
+</html>

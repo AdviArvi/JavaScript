@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //using function
+      function showCool() {
+        console.log("I am cool");
+      }
+
+      const isCool = true;
+      isCool ? showCool() : null;
+
+      //using variable
+      const count = 2;
+
+      const word = count === 1 ? "item" : "items";
+      const sentence = `You have ${count} ${word} in your cart`;
+      console.log(sentence);
+
+      //conditional && operator
+      function check1() {
+        return true;
+      }
+      function check2() {
+        return false;
+      }
+      function check3() {
+        return true;
+      }
+
+      if (check1() && check2() && check3()) {
+        console.log("Checks passed");
+      } else {
+        console.log("some checks failed");
+      }
+    </script>
+  </body>
+</html>
