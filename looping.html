@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // const toppings = [
+      //   "chees",
+      //   "mayonees",
+      //   "sausages",
+      //   "burger",
+      //   "pizza",
+      //   "bacon"
+      // ];
+
+      // function logTopping(topping, index, originalArray) {
+      //   const nextTopping = originalArray[index + 1];
+      //   const prevTopping = originalArray[index - 1];
+      //   //log the topping
+      //   console.log(topping);
+      //   //log the next topping
+
+      //   prevTopping ? console.log(prevTopping) : null;
+
+      //   nextTopping ? console.log(nextTopping) : null;
+
+      //   toppings.forEach(logTopping);
+
+      //   index === originalArray.length - 1
+      //     ? console.log("goodbuy")
+      //     : console.log("getting the next");
+      // }
+      // //__________OR____________
+      // toppings.forEach(logTopping);
+
+      //Map method
+
+      // const fullNames = ["shital", "kiran", "pratham"].map(
+      //   name => `${name} Thorat`
+      // );
+      // console.log(fullNames);
+
+      // //reduce method
+
+      // const orderTotals = [342, 568, 578, 214, 354, 698];
+      // const allOrders = orderTotals.reduce((first, second) => first + second);
+      // console.log(allOrders);
+
+      //loopings
+      //for loop
+
+      const numbers = [98, 59, 87, 97, 64, 85];
+      // for (let i = 0; i <= 10; i++) {
+      //   console.log(i);
+      // }
+
+      for (let i = 0; i < numbers.length; i++) {
+        console.log(numbers[i]);
+      }
+
+      //for of
+      const name = "shital thorat";
+
+      for (const letter of name) {
+        console.log(letter);
+      }
+      //for in
+
+      for (const number in numbers) {
+        console.log(number);
+      }
+      //while loop
+      let cool = true;
+      let i = 1;
+      while (cool === true) {
+        console.log("you are cool");
+        i++;
+        if (i > 100) {
+          cool = false;
+        }
+      }
+    </script>
+  </body>
+</html>

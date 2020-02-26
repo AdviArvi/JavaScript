@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Mutable-They change original array
+      const numbers = [1, 2, 3, 4, 5, 6];
+      const numbersBackwords = numbers.reverse();
+      console.log(numbers);
+
+      //Immutable-They do not change original array
+      const pizzaSlice = numbers.slice(2, 4);
+      console.log(pizzaSlice);
+      console.log(numbers);
+
+      //spread parameter
+      const numberReversed = [...numbers].reverse();
+      console.log(numberReversed);
+
+      const names = ["shital", "kiran", "advika", "arvika"];
+      names.push("suyog"); //add element at the end
+      console.log(names);
+      //OR
+      //const names2=[...names,'suyog'];
+
+      //add element to front
+      const names3 = ["pratham", ...names];
+      console.log(names3);
+
+      //If we want to add in the middle
+
+      const fruits = ["banana", "orange", "apple"];
+      const newFruits = [
+        ...fruits.slice(0, 1),
+        "water melon",
+        ...fruits.slice(1)
+      ];
+      console.log(newFruits);
+
+      //static methods
+      //Array.of('dog','cat')
+
+      //Array.from
+
+      const range = Array.from({ length: 5 }, function() {
+        return "snickers";
+      });
+
+      function createRange(start, end) {
+        const range2 = Array.from({ length: end - start + 1 }, function(
+          item,
+          index
+        ) {
+          return index;
+        });
+        return range2;
+      }
+
+      const myRange = createRange(3, 5);
+      console.log(Array.isArray(myRange));
+
+      const rice = {
+        basmati: 10,
+        idrayani: 5,
+        colom: 7
+      };
+
+      console.log(Object.entries(rice));
+      console.log(Object.keys(rice));
+      console.log(Object.values(rice));
+
+      //   Object.values(rice).forEach(qty => {
+      //     console.log(qty);
+      //   });
+
+      //destructuring
+      //   Object.values(rice).forEach(qty => {
+      //     const [keys, values] = entries;
+      //     console.log(keys, values);
+      //   });
+
+      //instance methods
+
+      console.log(fruits.join(" or "));
+
+      //
+      const foodString = "hot dogs','chillies','sausages','corn";
+      console.log(foodString.split(","));
+
+      const toppings = [
+        "chees",
+        "mayonees",
+        "sausages",
+        "burger",
+        "pizza",
+        "bacon"
+      ];
+      toppings.pop();
+      console.log(toppings);
+
+      toppings.shift();
+      console.log(toppings);
+
+      const toppingsCopy = toppings.slice(0);
+      console.log(toppingsCopy);
+
+      const toppingsCopy2 = [...toppings];
+      console.log(toppingsCopy2);
+
+      toppingsCopy.splice(2, 3);
+      console.log(toppingsCopy);
+
+      //callback
+
+      const feedback = [
+        { comment: "Love the burgs", rating: 4 },
+        { comment: "Horrible service", rating: 2 },
+        { comment: "Ambiance needs work", rating: 3 },
+        { comment: "I dont like burgers", rating: 1 }
+      ];
+
+      //   function findBurgRating(singleFeedback) {
+      //     if (singleFeedback.comment.includes("burg")) {
+      //       return true;
+      //     } else {
+      //       return false;
+      //     }
+      //   }
+      //OR using arrow function
+      //   const findBurgRating = singleFeedback =>
+      //     singleFeedback.comment.includes("burg");
+
+      //   const burgRating = feedback.find(findBurgRating);
+      //   console.log(burgRating);
+
+      //   const findSmoothieRating = singleFeedback =>
+      //     singleFeedback.comment.includes("smoothie");
+
+      //function returns function
+      //find method-
+      //   const burgRating = feedback.find(findByWord("burg"));
+      //   console.log(burgRating);
+
+      //   function findByWord(word) {
+      //     return function(singleFeedback) {
+      //       return singleFeedback.comment.includes(word);
+      //     };
+      //   }
+      //filter method-
+      //   const goodReviews = feedback.filter(
+      //     singleFeedback => singleFeedback.rating > 2
+      //   );
+      //   console.table(goodReviews);
+      //   //------------OR-----------------
+      //   function filterByMinRating(minRating) {
+      //     return function(singleFeedback) {
+      //       return singleFeedback.rating > minRating;
+      //     };
+      //   }
+      //   const goodReviews2 = feedback.filter(filterByMinRating(4));
+      //   console.table(goodReviews2);
+
+      //remove one star rating
+      const legitRatings = feedback.filter(single => single.rating !== 1);
+      console.table(legitRatings);
+
+      //sort method on numbers
+
+      const number = [1, 5, 6, 3, 98, 64, 45, 78];
+      const numberSort = number.sort(function(firstNum, secondNum) {
+        return firstNum - secondNum;
+      });
+      console.log(numberSort);
+
+      //sort the prices of items
+      const price = { hotdog: 150, burger: 180, sausages: 200, corn: 132 };
+      const sortedByPrice = Object.entries(price).sort(function(a, b) {
+        const aPrice = a[1];
+        const bPrice = b[1];
+        return aPrice - bPrice;
+      });
+      console.table(Object.fromEntries(sortedByPrice));
+    </script>
+  </body>
+</html>

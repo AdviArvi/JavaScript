@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <button class="one">Button 1</button>
+    <button class="two">Button 2</button> -->
+    <script>
+      const myDate = new Date("Feb 21,2018");
+      console.log(myDate);
+      console.log(myDate.getFullYear());
+
+      const names = new Array("shital", "thorat");
+      const shital = new Object({ name: "shital" });
+
+      //prototype with string
+
+      String.prototype.sarcastic = function() {
+        const sarcastic = this.split("")
+          .map((char, i) => {
+            if (i % 2) {
+              return char.toUpperCase();
+            } else {
+              return char.toLowerCase();
+            }
+          })
+          .join("");
+        return sarcastic;
+      };
+
+      //when use new keyword on function it creates a new instance object of that function
+      function Pizza(toppings = [], customer) {
+        console.log("Making a Pizza");
+        console.log(this);
+        this.toppings = toppings;
+        this.customer = customer;
+        this.slices = 10;
+        // this.eat = function() {
+        //   if (this.slices > 0) {
+        //     this.slices = this.slices - 1;
+        //     console.log(`CHOMP you now have ${this.slices} left!`);
+        //   } else {
+        //     console.log(`sorry no slices left`);
+        //   }
+        // };
+      }
+      Pizza.prototype.eat = function() {
+        if (this.slices > 0) {
+          this.slices = this.slices - 1;
+          console.log(`CHOMP you now have ${this.slices} left!`);
+        } else {
+          console.log(`sorry no slices left`);
+        }
+      };
+
+      // const pepperoniPizza = new Pizza();
+      // console.log(pepperoniPizza);
+      // console.log(pepperoniPizza.constructor);
+      // console.log(pepperoniPizza instanceof Pizza);
+
+      const pepperoniPizza = new Pizza(["pepperoni"], "shital thorat");
+      const canadianPizza = new Pizza(
+        ["pepperoni", "onian", "mushrooms"],
+        "kiran thorat"
+      );
+
+      // const button1 = document.querySelector(".one");
+      // const button2 = document.querySelector(".two");
+
+      // function tellMeAboutTheButton() {
+      //   console.log("outside", this);
+      //   setTimeout(() => {
+      //     console.log("inside", this);
+      //     this.textContent = "You Clicked Me";
+      //   }, 1000);
+      // }
+      // button1.addEventListener("ckick", tellMeAboutTheButton);
+      // button2.addEventListener("ckick", tellMeAboutTheButton);
+    </script>
+  </body>
+</html>
