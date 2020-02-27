@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function makePizza(toppings = []) {
+        return new Promise(function(resolve, reject) {
+          if (toppings.includes("pineapple")) {
+            reject("seriously? Get Out");
+          }
+        });
+      }
+      // const amountOfTimeToBake=500+(toppings.length*200);
+
+      function handelError(err) {
+        console.log("Ohh no");
+        console.log(err);
+      }
+
+      makePizza(["chees", "pineapple"])
+        .then(pizza => {
+          console.log(pizza);
+        })
+        .catch(handelError);
+
+      const p1 = makePizza(["pep"]);
+      const p2 = makePizza(["pineapple"]);
+
+      const dinnerPromise = Promise.all([p1, p2]);
+      dinnerPromise.then(results => {
+        console.log(results);
+      });
+    </script>
+  </body>
+</html>

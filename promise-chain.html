@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .go {
+        margin: 5rem;
+        background: white;
+        padding: 5rem;
+        width: 5rem;
+        height: 5rem;
+        transition: all 0.2s;
+      }
+      .go.circle {
+        border-radius: 50%;
+      }
+      .go.red {
+        background: red;
+      }
+      .go.purple {
+        background: purple;
+        color: white;
+      }
+      .go.fadeOut {
+        opacity: 0;
+      }
+    </style>
+    <div class="go">Click Me</div>
+    <script>
+      //   console.log("Starting");
+      //   setTimeout(function() {
+      //     console.log("Running");
+      //   }, 2000);
+      //   console.log("Ending");
+      const wait = (ms = 0) => {
+        return new Promise(function(resolve) {
+          setTimeout(resolve, ms);
+        });
+      };
+      wait(200).then(() => {
+        console.log("Done!");
+      });
+      const go = document.querySelector(".go");
+
+      function animate(e) {
+        const el = e.currentTarget;
+        // change the text to Go when clicked.
+        el.textContent = "Go!";
+        //1.make it a circle after 2 seconds
+        wait(200)
+          .then(() => {
+            el.classList.add("circle");
+            return wait(500);
+          })
+          .then(() => {
+            //3.make it red after 0.5 seconds
+            el.classList.add("red");
+            return wait(250);
+          })
+          .then(() => {
+            //3.make a square after 0.25 seconds
+            el.classList.remove("circle");
+            return wait(300);
+          })
+          .then(() => {
+            //4.make it purple after 0.3 seconds
+            el.classList.remove("red");
+            el.classList.add("purple");
+            return wait(500);
+          })
+          .then(() => {
+            //5.fade out after 0.5 seconds
+            el.classList.add("fadeOut");
+          });
+      }
+
+      go.addEventListener("click", animate);
+
+      go.addEventListener("clickxxx", function(e) {
+        const el = e.currentTarget;
+      });
+    </script>
+  </body>
+</html>
