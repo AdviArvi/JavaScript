@@ -1,4 +1,4 @@
-async function fetchEmployees()
+async function fetchEmployeeDetailsUsingAsyncAwait()
 {
     try{
         const resp = await fetch('http://dummy.restapiexample.com/api/v1/employees');

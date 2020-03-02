@@ -1,17 +1,18 @@
 
-function testPromise()
+function fetchEmployeeDetailsUsingPromise()
 {
 
-  const Promise=fetch("http://dummy.restapiexample.com/api/v1/employees");
-  Promise.then(response=>
+  const emp_details=fetch("http://dummy.restapiexample.com/api/v1/employees");
+  emp_details.then(response=>
     {
-     const data= response.json();
-     console.log(data);
+     const result= response.json();
+     console.log(result);
      let emp_arr=[];
-     data.then(response2=>
+     result.then(data=>
         {
-     emp_arr.push(response2);  
-     console.log(emp_arr);
+     emp_arr.push(data);  
+     
+     console.log(JSON.stringify(emp_arr));
 
         });
     }).catch(handleError)

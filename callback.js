@@ -1,17 +1,17 @@
 
-function fetchEmployeeDetails(results)
+function fetchEmployeeDetailsUsingCallback(results)
 {
   try{
-      const response=fetch('http://dummy.restapiexample.com/api/v1/employees')
-      .then(function(response) 
+      const result=fetch('http://dummy.restapiexample.com/api/v1/employees')
+      .then(function(result) 
       {
-      return response.json();
+      return result.json();
       })
-      .then(function(myJson) 
+      .then(function(funCallback) 
       {
     
       let emparr=[];
-      myJson.data.map((r)=>emparr.push(r));
+      funCallback.data.map((r)=>emparr.push(r));
       console.log(JSON.stringify(emparr));
       })
      }
