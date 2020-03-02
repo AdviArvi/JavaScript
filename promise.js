@@ -2,8 +2,8 @@
 function fetchEmployeeDetailsUsingPromise()
 {
 
-  const Promise=fetch("http://dummy.restapiexample.com/api/v1/employees");
-  Promise.then(resp=>
+  const promise=fetch("http://dummy.restapiexample.com/api/v1/employees");
+  promise.then(resp=>
     {
      const result= resp.json();
      console.log(result);
