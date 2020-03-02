@@ -2,16 +2,16 @@
 function fetchEmployeeDetailsUsingPromise()
 {
 
-  const emp_details=fetch("http://dummy.restapiexample.com/api/v1/employees");
-  emp_details.then(response=>
+  const Promise=fetch("http://dummy.restapiexample.com/api/v1/employees");
+  Promise.then(resp=>
     {
-     const result= response.json();
+     const result= resp.json();
      console.log(result);
      let emp_arr=[];
-     result.then(data=>
+     result.then(response2=>
         {
-     emp_arr.push(data);  
-     
+     emp_arr.push(response2);  
+     console.log(emp_arr);
      console.log(JSON.stringify(emp_arr));
 
         });
