@@ -3,9 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Async Prompt</title>
   </head>
   <body>
+    <style>
+      .popup {
+        background: white;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        transition: all 0.25s;
+        top: 0;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        --opacity: 0;
+        opacity: var(--opacity);
+      }
+      .popup.open {
+        --opacity: 1;
+        pointer-events: all;
+      }
+      .popup.open fieldset {
+        --scale: 1;
+      }
+    </style>
     <div class="wrapper">
       <button class="askMe" data-question="what is your name?">
         Enter Name
@@ -13,7 +36,7 @@
       <button class="askMe" data-cancel data-question="what is your age?">
         Enter Age
       </button>
-      <!-- <script src="./async-await-prompt.js"></script> -->
+      <script src="./async-await-prompt.js"></script>
     </div>
   </body>
 </html>
